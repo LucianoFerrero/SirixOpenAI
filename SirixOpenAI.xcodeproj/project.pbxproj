@@ -14,6 +14,9 @@
 		1CF0D1052B49D397001D2CB5 /* SirixOpenAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF0D1042B49D397001D2CB5 /* SirixOpenAITests.swift */; };
 		1CF0D10F2B49D397001D2CB5 /* SirixOpenAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF0D10E2B49D397001D2CB5 /* SirixOpenAIUITests.swift */; };
 		1CF0D1112B49D397001D2CB5 /* SirixOpenAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF0D1102B49D397001D2CB5 /* SirixOpenAIUITestsLaunchTests.swift */; };
+		1CF0D11F2B49D411001D2CB5 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF0D11E2B49D411001D2CB5 /* Combine.framework */; };
+		1CF0D1222B49D432001D2CB5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF0D1212B49D432001D2CB5 /* Alamofire */; };
+		1CF0D1242B49D453001D2CB5 /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF0D1232B49D453001D2CB5 /* AppIntents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		1CF0D10A2B49D397001D2CB5 /* SirixOpenAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SirixOpenAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF0D10E2B49D397001D2CB5 /* SirixOpenAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirixOpenAIUITests.swift; sourceTree = "<group>"; };
 		1CF0D1102B49D397001D2CB5 /* SirixOpenAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirixOpenAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1CF0D11E2B49D411001D2CB5 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
+		1CF0D1232B49D453001D2CB5 /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = System/Library/Frameworks/AppIntents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF0D11F2B49D411001D2CB5 /* Combine.framework in Frameworks */,
+				1CF0D1222B49D432001D2CB5 /* Alamofire in Frameworks */,
+				1CF0D1242B49D453001D2CB5 /* AppIntents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,7 @@
 				1CF0D1032B49D397001D2CB5 /* SirixOpenAITests */,
 				1CF0D10D2B49D397001D2CB5 /* SirixOpenAIUITests */,
 				1CF0D0F12B49D395001D2CB5 /* Products */,
+				1CF0D11D2B49D410001D2CB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +136,15 @@
 			path = SirixOpenAIUITests;
 			sourceTree = "<group>";
 		};
+		1CF0D11D2B49D410001D2CB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CF0D1232B49D453001D2CB5 /* AppIntents.framework */,
+				1CF0D11E2B49D411001D2CB5 /* Combine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +161,9 @@
 			dependencies = (
 			);
 			name = SirixOpenAI;
+			packageProductDependencies = (
+				1CF0D1212B49D432001D2CB5 /* Alamofire */,
+			);
 			productName = SirixOpenAI;
 			productReference = 1CF0D0F02B49D395001D2CB5 /* SirixOpenAI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +236,9 @@
 				Base,
 			);
 			mainGroup = 1CF0D0E72B49D395001D2CB5;
+			packageReferences = (
+				1CF0D1202B49D432001D2CB5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1CF0D0F12B49D395001D2CB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CF0D1202B49D432001D2CB5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CF0D1212B49D432001D2CB5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF0D1202B49D432001D2CB5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CF0D0E82B49D395001D2CB5 /* Project object */;
 }
